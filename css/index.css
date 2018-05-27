@@ -1,0 +1,94 @@
+/* label focus color */
+.input-field input[type=text]:focus + label {
+    color:  black;
+    border-left: none
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid black;
+    box-shadow: 0 1px 0 0 black;
+    border-left: none
+
+}
+/* label focus color */
+.input-field input[type=email]:focus + label {
+    color:  black;
+    border-left: none
+}
+/* label underline focus color */
+.input-field input[type=email]:focus {
+    border-bottom: 1px solid black;
+    box-shadow: 0 1px 0 0 black;
+    border-left: none
+
+}
+/* label focus color */
+.input-field input[type=password]:focus + label {
+    color: black;
+}
+/* label underline focus color */
+.input-field input[type=password]:focus {
+    border-bottom: 1px solid black;
+    box-shadow: 0 1px 0 0 black;
+}
+#map {
+    padding-top: 5%;
+    height: 400px;
+    width: 100%;
+}
+#nav-mobile {
+    background: url("../afbeeldingen/bk-freeze.jpg");
+}
+.spa { display: none; }
+#tabLocatie { display: block; }
+.registreer {
+    text-align: center;
+}
+#login {
+    width: 70%;
+    alignment: center;
+}
+.loginTopdiv {
+    height:40%;
+    text-align: center;
+    clear: both;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    position: relative;
+}
+.loginBottomdiv {
+    top: 40%;
+    height: 60%;
+    clear:both;
+    position: static;
+}
+#divResultaten {
+    text-align: center;
+    color: #1976d2;
+}
+#divResultaten li {
+    color: #1976d2;
+}
+.side-nav li .active {
+    color: white;
+}
+.kleur {
+    background: linear-gradient(to bottom right, #336799, #66cdcc); /* Standard syntax */
+}
+#toonWachtwoord {
+    position:absolute;
+    bottom:28px;
+    right:10px;
+    width:24px;
+    height:24px;
+}
+#gebruikLocatie {
+    position:absolute;
+    bottom:28px;
+    right:10px;
+    width:24px;
+    height:24px;
+}
+.favorieten {
+    margin-right: 10px;
+}
