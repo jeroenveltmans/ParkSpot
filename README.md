@@ -1,7 +1,7 @@
 # ParkSpot
 A Cordova (PhongeGap) app to find parking places near to your location. This repository contains the www folder of the project (PHP files not included) and a few screenshots.
 
-Made in 2017
+*Made in 2017*
 
 ## Plugins
 ```
