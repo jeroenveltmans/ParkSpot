@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <title>ParkSpot</title>
+
+</head>
+<body>
+
+<!-- Fixed navbar -->
+<div class="navbar-fixed">
+    <nav class="kleur">
+        <div class="nav-wrapper container"><a href="#!" class="brand-logo center">Where to park?</a>
+            <a href="#!" data-activates="nav-mobile" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+</div>
+<!-- Fixed sideNav -->
+<ul id="nav-mobile" class="side-nav">
+    <li><a class="active" href="#!" data-show="tabLocatie"><i class="material-icons">location_on</i>Locatie</a></li>
+    <li><div class="divider"></div></li>
+    <li><a href="#!" data-show="tabRealTime"><i class="material-icons">schedule</i>Real-Time</a></li>
+    <li><div class="divider"></div></li>
+    <li><a href="#!" data-show="tabInformatie"><i class="material-icons">info</i>Informatie</a></li>
+    <li><div class="divider"></div></li>
+</ul>
+<!-- Grid -->
+<div class="container">
+    <div class="row spa" id="tabLocatie">
+        <div class="col s12">
+            <div class="input-field col s12 zoekbalk">
+                <input type="text" id="mapSearch">
+                <img src="./afbeeldingen/gebruikLocatie.png" id="gebruikLocatie">
+            </div>
+            <div id="map"></div>
+            <br/>
+            <div style="text-align: center">
+                <a class="waves-effect waves-light btn kleur" id="zoekLocaties"><i class="material-icons left">my_location</i>Zoek locaties</a>
+            </div>
+            <br/>
+            <div id="divResultaten"></div>
+            <ul class="collapsible" data-collapsible="accordion">
+            </ul>
+        </div>
+    </div>
+
+    <div class="row spa" id="tabInformatie">
+        <div class="center col s12">
+            <br/><div class="col s12"><i class="small material-icons">info</i></div>
+            <div class="col s12">In deze app kan je de dichtst bijzijnde parkings vinden in een straal van 400 meter binnen je huidige of gekozen locatie!<br/><br/></div><div class="col s12"><i class="small material-icons">perm_identity</i></div>
+            <div class="col s12">Jeroen Veltmans<br/>
+                <img src="./afbeeldingen/jv.jpg" height="65%" width="65%" alt=""><br/><br/>
+            </div>
+            <div class="col s12"><i class="small material-icons">email</i></div>
+            <div class="col s12"><a href="mailto:test@test.com">test@test.com</a><br/><br/></div>
+            <div class="col s12"><i class="small material-icons">phone</i></div>
+            <div class="col s12"><a href="tel:049*******">**** ** ** ** </a></div>
+        </div>
+    </div>
+
+    <div class="row spa" id="tabRealTime">
+        <div class="col s12" id="loginPage">
+            <div class="loginTopdiv">
+                <img  height="60%" width="60%" src="./afbeeldingen/ParkSpotColor.png">
+            </div>
+            <div class="loginBottomdiv">
+                <form>
+                    <div class="input-field col s12">
+                        <input id="loginEmail" type="text" class="validate">
+                        <label for="loginEmail" class="">Email</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="password" id="loginWachtwoord" class="validate">
+                        <label for="loginWachtwoord">Password</label>
+                        <img src="./afbeeldingen/visibleGrijs.png" id="toonWachtwoord">
+                    </div>
+                    <div style="text-align: center"><button id="login" type="submit" class="waves-effect waves-light btn kleur">Login</button></div>
+                </form>
+                </br>
+                <div class="registreer">Geen account ? <a href="#!" data-show="tabRegistreer">Registreer je!</a></div>
+            </div>
+        </div>
+        <div class="center col s12" id="realTime">
+            <h2>GENT</h2>
+            <div class="center col s12" id="realTimeGent">
+            </div>
+            <div class="fixed-action-btn">
+            <a class="btn-floating btn-medium waves-effect waves-light kleur" id="renew"><i class="material-icons">autorenew</i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row spa" id="tabRegistreer">
+        <div class="col s12">
+            <form>
+                <div class="input-field col s6">
+                    <input id="registreerVoornaam" type="text" class="validate">
+                    <label for="registreerVoornaam">First Name</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="registreerAchternaam" type="text" class="validate">
+                    <label for="registreerAchternaam">Last Name</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="registreerWachtwoord" type="password" class="validate">
+                    <label for="registreerWachtwoord">Password</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="registreerEmail" type="email" class="validate">
+                    <label for="registreerEmail">Email</label>
+                </div>
+                <div style="text-align: center"><button id="registreerAccount" type="submit" class="waves-effect waves-light btn kleur">Registreer</button></div>
+                </br>
+                <div class="registreer">Al een account ? <a href="#!" data-show="tabRealTime">Log in!</a></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+<script src="cordova.js"></script>
+<script src="js/maps.js"></script>
+<script src="js/realtime.js"></script>
+<script src="js/plaatsen.js"></script>
+<script defer src="js/app.js"></script>
+<script src="https://apis.google.com/js/api.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=abcdefghijklmnopqrstuvwxyzA&libraries=places" async defer></script>
+</body>
+</html>
